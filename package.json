@@ -2,6 +2,10 @@
   "name": "uo-matrix-generator",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "bu": "node generate-uo.js",
+    "matrix": "node generate-matrix.js"
+  },
   "dependencies": {
     "fs": "^0.0.1-security",
     "path": "^0.12.7",

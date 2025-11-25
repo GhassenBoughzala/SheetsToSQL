@@ -85,4 +85,3 @@ fs.writeFileSync(outputFile, sql.trim() + '\n');
 console.log('✅ SUCCESS!');
 console.log(`Generated: ${outputFile}`);
 console.log(`Total INSERTs: ${count}`);
-console.log(`Ready to execute!`);
