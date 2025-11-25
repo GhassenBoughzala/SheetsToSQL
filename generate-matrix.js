@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Your file
-const EXCEL_FILE = path.join(__dirname, 'sheets', '872-Matrix.xlsx');
+const EXCEL_FILE = path.join(__dirname, 'sheets', 'FILE_NAME.xlsx');
 const EXCEL_PATH = path.resolve(__dirname, EXCEL_FILE);
 
 // Get entity code

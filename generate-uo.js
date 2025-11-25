@@ -1,6 +1,3 @@
-// generate-business-unit.js
-// Run with: node generate-business-unit.js 87200
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -13,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // CONFIG — your Excel file
-const EXCEL_FILE = path.join(__dirname, 'sheets', '872-UO.xlsx');
+const EXCEL_FILE = path.join(__dirname, 'sheets', 'FILE_NAME.xlsx');
 const EXCEL_PATH = path.resolve(__dirname, EXCEL_FILE);
 
 // Get entity code from command line
@@ -56,7 +53,7 @@ let count = 0;
 for (const row of dataRows) {
     if (!row || row.length < 3) continue;
 
-    const codeUO = String(row[0]).trim();     // Column A: CODE UO (AGR, PRO, etc.)
+    const codeUO = String(row[0]).trim();      // Column A: CODE UO
     const libelle = String(row[1]).trim();     // Column B: LIBELLE
     const typeStr = String(row[2]).trim();     // Column C: TYPE UO
 
