@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Your file
-const EXCEL_FILE = './sheets/872-Matrix.xlsx';
+const EXCEL_FILE = path.join(__dirname, 'sheets', '872-Matrix.xlsx');
 const EXCEL_PATH = path.resolve(__dirname, EXCEL_FILE);
 
 // Get entity code
@@ -44,8 +44,6 @@ const workbook = XLSX.readFile(EXCEL_PATH);
 // Use the FIRST sheet automatically
 const firstSheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[firstSheetName];
-
-console.log(`Using sheet: "${firstSheetName}"\n`);
 
 // Convert to array of arrays
 const rawData = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });

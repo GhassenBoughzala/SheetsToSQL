@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // CONFIG — your Excel file
-const EXCEL_FILE = './sheets/872-UO.xlsx';
+const EXCEL_FILE = path.join(__dirname, 'sheets', '872-UO.xlsx');
 const EXCEL_PATH = path.resolve(__dirname, EXCEL_FILE);
 
 // Get entity code from command line
@@ -43,8 +43,6 @@ console.log(`Reading: ${EXCEL_FILE}\n`);
 const workbook = XLSX.readFile(EXCEL_PATH);
 const firstSheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[firstSheetName];
-
-console.log(`Using sheet: "${firstSheetName}"\n`);
 
 // Read as array of arrays
 const rawData = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
