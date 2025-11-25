@@ -1,0 +1,10 @@
+{
+  "name": "uo-matrix-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "xlsx": "^0.18.5"
+  }
+}
