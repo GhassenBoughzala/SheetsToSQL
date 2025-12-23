@@ -17,16 +17,14 @@ const EXCEL_PATH = path.resolve(__dirname, EXCEL_FILE);
 const args = process.argv.slice(2);
 if (args.length === 0) {
     console.log(`
-Usage:
-  node generate-business-unit.js <ENTITY_CODE> <NAME>
-File: ${EXCEL_FILE}
-Generates INSERT ... ON CONFLICT for business_unit table
-`);
+    Usage: node generate-script.js <ENTITY_CODE> <NAME>
+    File: ${EXCEL_FILE} 
+    Generates INSERT ... ON CONFLICT for business_unit table `);
     process.exit(1);
 }
 
 const ENTITY_CODE = args[0].trim();
-const ENTITY_NAME = args[1] + ' ' + args[2].trim() + ' ' + args[3].trim();
+const ENTITY_NAME = args.slice(1).filter(Boolean).join(' ');
 
 // Check file exists
 if (!fs.existsSync(EXCEL_PATH)) {
