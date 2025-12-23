@@ -40,7 +40,7 @@ const workbook = XLSX.readFile(EXCEL_PATH);
 const firstSheet = workbook.SheetNames[0];
 const secondSheet = workbook.SheetNames[1];
 const sheetMatrix = workbook.Sheets[firstSheet]; //Sheet 1 must be for Matrix
-const sheetUos = workbook.Sheets[secondSheet]; //Sheet 2 must be for Matrix
+const sheetUos = workbook.Sheets[secondSheet]; //Sheet 2 must be for UO
 
 // Read as array of arrays
 const rawDataMat = XLSX.utils.sheet_to_json(sheetMatrix, { header: 1, defval: '' });
