@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "script": "node generate-script.js",
     "uo": "node generate-uo.js",
     "mat": "node generate-matrix.js"
   },
